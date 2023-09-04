@@ -1,0 +1,178 @@
+body {
+  background-color: #d9d9f9;
+}
+
+.tasksContainerSection {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  grid-template-rows: 1fr;
+  justify-content: left;
+  background-color: #D9D9F9;
+  width: 100%;
+  height: 100vh;
+
+}
+
+.taskDiv {
+  margin: 5px;
+  border-radius: 1rem;
+  background-color: #D9D9F9;
+  grid-column-start: 2;
+  grid-column-start: 1;
+  height: 100%;
+  border-right: 0.5px solid #a9af7e;
+}
+
+.tasksByTimeDiv {
+  display: block;
+  text-align: center;
+  background-color: #D9D9F9;
+  border-radius: 1rem;
+}
+
+.tasksByTimeDiv.active {
+  display: block;
+}
+
+.taskBtn {
+  width: 16rem;
+}
+
+.taskByTimeList {
+  list-style: none;
+  padding: 10px;
+}
+
+.listItem {
+  position: relative;
+  display: inline-block;
+  margin: 15px;
+  padding: 15px 30px;
+  width: 16rem;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: black;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid #8b8fcd;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 #8b8fcd;
+}
+
+.listItem:hover {
+  box-shadow: inset 0 -100px 0 0 #a9af7e;
+}
+
+.listItem:active {
+  transform: scale(0.9);
+}
+
+.listItem a {
+  text-decoration: none;
+  color: #000;
+  min-width: auto;
+}
+
+.listItem a:hover {
+  color: #fff;
+}
+
+.ellipsesV {
+  border: none;
+  display: block;
+  position: relative;
+  margin: 0.5px;
+  left: 0;
+  top: 0;
+  float: left;
+  width: fit-content;
+  display: none;
+  visibility: hidden;
+}
+
+.ellipsesV:hover {
+  box-shadow: none;
+  color: #a9af7e;
+}
+
+.ellipsesV.active {
+  color: #1111c5;
+}
+
+.SideBar {
+  display: block;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.SideBar.active {
+  transform: translateX(-100);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+@media (max-width: 1024px) {
+  .tasksContainerSection.normal {
+    grid-template-columns: 0fr 3fr;
+  }
+
+  .taskDiv {
+    border: none;
+    width: 30%;
+  }
+
+  .ellipsesV {
+    display: block;
+    visibility: visible;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    color: #000;
+    margin-bottom: 10px;
+    z-index: 30;
+  }
+
+  /* Adjust the tasksByTimeDiv for smaller screens */
+  .tasksByTimeDiv {
+    background: transparent;
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: -100%;
+    /* Move it off-screen initially */
+    width: 25%;
+    /* Adjust as needed */
+    height: 100%;
+    background-color: #D9D9F9;
+    transition: left 0.3s ease-in-out;
+    margin-top: 30px;
+
+  }
+
+  .taskBtn,
+  .listItem {
+    width: 100%;
+    margin: 10px;
+    margin-top: 20px;
+    padding: 5px 8px;
+  }
+
+  .tasksByTimeDiv.active {
+    left: 0;
+  }
+
+  .taskByTimeList {
+    list-style: none;
+    padding: none;
+    background: transparent;
+  }
+
+  .tasksContainerSection {
+    justify-content: center;
+    grid-template-columns: 1fr 2.5fr;
+  }
+}

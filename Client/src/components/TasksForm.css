@@ -1,0 +1,130 @@
+.Form {
+    position: fixed;
+    display: flux;
+    top: 70px;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #d9d9f9;
+}
+
+.formComponent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* for inpput form */
+.inputField {
+    margin: 8px;
+    padding: 8px;
+    background-color: #d9d9f9;
+}
+
+.Title {
+    margin: 8px 10px 2px 10px;
+    padding: 8px;
+    width: 700px;
+    border-radius: 16px;
+    outline: none;
+    border: none;
+}
+
+/* now for TaskDisplaying on the website */
+.taskContainer {
+    grid-column-start: 1;
+    grid-column-start: 2;
+    height: 100%;
+    width: 100%;
+}
+
+.displayContainer {
+    background-color: #c9c9fb;
+    border-radius: 1rem;
+}
+
+.CloseButton {
+    position: relative;
+    size: 16cm;
+    font-size: 25px;
+    border: none;
+    padding: 0px;
+    right: 0;
+    float: right;
+    margin-left: auto;
+}
+
+.CloseButton:hover {
+    box-shadow: none;
+}
+
+.displayContainer {
+    background-color: #d9d9f9;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: 250px; */
+    overflow: auto;
+}
+
+.card {
+    padding: 10px;
+    margin: 20px 10px;
+    background-color: #c6c6ff;
+    border-radius: 1rem;
+}
+
+.CardTitle {
+    text-align: center;
+    margin: 8px;
+    padding: 3px;
+    font-size: 1.3rem;
+}
+
+.cardDescription,
+.cardStatus,
+.cardPriority,
+.cardDate {
+    display: inline-block;
+    margin-right: 3px;
+    padding: 2px;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.1rem;
+    font-weight: 1.1rem;
+}
+
+.btn-container {
+    margin: 5px;
+    display: flex;
+    align-items: flex-end;
+    height: auto;
+}
+
+
+.btn-dalete,
+.btn-update,
+.submitBtn {
+    padding: 10px;
+    border: 1px solid #557153;
+    margin: 5px;
+}
+
+@media only screen and (max-width: 742px) {
+    .displayContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .inputField {
+        width: 90%;
+    }
+
+    .Title {
+        width: 90%;
+    }
+}

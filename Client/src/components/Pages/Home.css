@@ -1,0 +1,236 @@
+.homeSection {
+  height: 650px;
+  background: linear-gradient(to bottom right, #9999cc, #f4fbf3, #9393DF, #557153);
+  box-shadow: 0 3px 10px #9999cc;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.leftdiv {
+  display: block;
+  font-size: 3rem;
+  position: relative;
+  flex-wrap: wrap;
+  width: auto;
+  padding: 10px 30px;
+  text-align: center;
+  justify-content: center;
+  top: 20%;
+  left: 3%;
+  margin: 10px auto;
+}
+
+.rightdiv {
+  content: url("../../../public/Task.png");
+  position: relative;
+  width: auto;
+  height: 500px;
+  top: 10%;
+  float: right;
+  border-radius: 20px;
+  box-shadow: 0 3px 20px #8c978c;
+  margin: 10px auto;
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  margin: 35px 15px;
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: black;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid #8B8FCD;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 #8B8FCD;
+}
+
+button:hover {
+  color: white;
+  box-shadow: inset 0 -100px 0 0 #a9af7e;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+.infoSection {
+  background-color: #d9d9f9;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 450px;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.infoLeftDiv {
+  border-radius: 2rem;
+  background-color: #ebebff;
+  padding: 2rem;
+  margin-right: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+  text-align: center;
+  object-fit: contain;
+  overflow: auto;
+}
+
+.infoRightDiv {
+  border-radius: 2rem;
+  background-color: #ebebff;
+  margin-left: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  object-fit: contain;
+  overflow: auto;
+}
+
+.headIntro {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  font-weight: 200;
+}
+
+.headPara {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+}
+
+.headLine {
+  color: #557153;
+}
+
+@media only screen and (max-width: 530px) {
+
+  /*Tablets [601px -> 1200px]*/
+  .leftdiv {
+    font-size: 2rem;
+    width: 100%;
+  }
+
+  .rightdiv {
+    font-size: 2rem;
+    width: 100%;
+  }
+
+  .homeSection {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .infoSection {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    padding: 1rem;
+  }
+
+  .infoLeftDiv {
+    width: 100%;
+    height: auto;
+    padding: .5rem;
+    overflow: auto;
+    margin-right: 0px;
+  }
+
+  .infoRightDiv {
+    width: 100%;
+    height: auto;
+    padding: .5rem;
+    overflow: auto;
+    margin-left: 0px;
+  }
+
+  .headIntro {
+    font-size: 10rem;
+    margin-top: 1rem;
+    font-weight: 100;
+
+  }
+
+  .headPara {
+    margin-top: 2rem;
+    font-size: 6px;
+  }
+
+
+}
+
+@media only screen and (max-width: 800px) {
+
+  /*Tablets [601px -> 1200px]*/
+  .leftdiv {
+    height: 400px;
+    font-size: 2rem;
+    width: 100%;
+    padding: 60px 10px;
+    margin: 0;
+  }
+
+  .rightdiv {
+    width: auto;
+    display: block;
+    top: 0;
+  }
+
+  .homeSection {
+    height: auto;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: min-content;
+    justify-content: center;
+  }
+
+  .infoLeftDiv {
+    border-radius: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .infoLeftDiv {
+    width: 100%;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1rem;
+    height: auto;
+  }
+
+  .infoRightDiv {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+  }
+
+  .headIntro {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    font-weight: 200;
+  }
+
+  .headPara {
+    margin-top: 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .headIntro {
+    font-size: 2rem;
+    margin-top: 1rem;
+    font-weight: 200;
+  }
+
+  .headPara {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+  }
+}

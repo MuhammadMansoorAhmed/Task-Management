@@ -1,0 +1,118 @@
+.navBar {
+    display: flex;
+    padding: 15px 10px 15px 10px;
+    background-color: #557153;
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+}
+
+.navBar .link {
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    font-size: 20px;
+    color: white;
+    margin: 0px 20px;
+
+}
+
+.navBar .link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    background-color: #a9af7e;
+    border-radius: 40px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .3s;
+}
+
+.navBar .link:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navBar .link:focus::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.fatime,
+.fabar {
+    border: none;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    font-size: 25px;
+    padding: 0;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    visibility: hidden;
+    margin: 14px;
+}
+
+.fatime:hover,
+.fabar:hover {
+    box-shadow: none;
+}
+.logOutButton{
+    margin: 0px 5px;
+    padding: 2px 4px;
+    color: white;
+    font-size: 16px;
+    border-radius: 2px;
+    border: 0.5px;
+    
+}
+.logOutButton:hover{
+    box-shadow: none;
+    background-color: #9A9ACC;
+    color: black;
+}
+
+@media only screen and (max-width: 1024px) {
+    .fabar {
+        visibility: visible;
+        position: absolute;
+        float: right;
+    }
+    header{
+        background-color: #557153;
+        height: 55px;
+    }
+    .fatime {
+        visibility: visible;
+    }
+    .navBar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1.5rem;
+        z-index: 100;
+        transition: 0.4s;
+        transform: translateY(-100vh);
+    }
+    .navBar .link {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+    .navBar .link::after{
+        transition: transform 0.1s;
+    }
+    .responsive_nav {
+        transform: none;
+    }
+}
